@@ -1,9 +1,13 @@
 import "@/styles/globals.css";
 import type { Metadata } from "next";
 
+import { ThemeProvider } from "@/components/theme-provider";
+import { fontVariables } from "@/lib/fonts";
+import { cn } from "@/lib/utils";
+
 export const metadata: Metadata = {
   title: "Satrio Wicaksono",
-  description: "Personal portfolio site",
+  description: "Software Engineer",
 };
 
 export default function RootLayout({
@@ -12,8 +16,24 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="en" suppressHydrationWarning data-scroll-behavior="smooth">
+      <body
+        className={cn(
+          "bg-background text-foreground flex flex-col items-center overscroll-none font-sans",
+          fontVariables
+        )}
+      >
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <div className="flex min-h-svh w-full max-w-160 flex-col px-5 py-24">
+            <div className="flex-1">{children}</div>
+          </div>
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
