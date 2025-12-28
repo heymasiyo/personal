@@ -42,7 +42,11 @@ export default function Home() {
           >
             design
           </Link>{" "}
-          and technology. I also spend time{" "}
+          and{" "}
+          <Link href="/work" className="custom-link">
+            technology
+          </Link>
+          . I also spend time{" "}
           <Link
             href="https://www.goodreads.com/heymasiyo"
             className="custom-link"
@@ -66,7 +70,7 @@ export default function Home() {
         <p>
           You can reach me on{" "}
           <Link
-            href="http://x.com/heymasiyo/"
+            href="http://x.com/heymasiyo"
             className="custom-link"
             target="_blank"
             rel="noopener noreferrer"
