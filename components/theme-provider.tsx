@@ -50,7 +50,7 @@ export function ThemeToggle() {
           )}
         >
           {icon}
-          <span className="sr-only">Set {label} theme</span>
+          <span className="sr-only">Toggle {label} theme</span>
         </Button>
       ))}
     </ButtonGroup>
