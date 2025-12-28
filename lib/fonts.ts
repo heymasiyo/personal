@@ -1,7 +1,7 @@
 import {
   Crimson_Pro as FontDisplay,
-  Geist_Mono as FontMono,
-  Geist as FontSans,
+  JetBrains_Mono as FontMono,
+  Inter as FontSans,
 } from "next/font/google";
 import { cn } from "./utils";
 

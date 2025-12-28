@@ -1,6 +1,7 @@
 import "@/styles/globals.css";
 import type { Metadata } from "next";
 
+import { SiteFooter } from "@/components/site-footer";
 import { ThemeProvider } from "@/components/theme-provider";
 import { fontVariables } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
@@ -31,6 +32,7 @@ export default function RootLayout({
         >
           <div className="flex min-h-svh w-full max-w-160 flex-col px-5 py-24">
             <div className="flex-1">{children}</div>
+            <SiteFooter />
           </div>
         </ThemeProvider>
       </body>
