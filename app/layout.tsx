@@ -20,7 +20,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning data-scroll-behavior="smooth">
       <body
         className={cn(
-          "bg-background text-foreground flex flex-col items-center overscroll-none font-sans",
+          "bg-background text-foreground flex flex-col items-center overscroll-none font-sans antialiased",
           fontVariables
         )}
       >
@@ -30,7 +30,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="flex min-h-svh w-full max-w-160 flex-col px-5 py-24">
+          <div className="flex min-h-svh w-full max-w-160 flex-col px-5 py-24 md:px-0">
             <div className="flex-1">{children}</div>
             <SiteFooter />
           </div>

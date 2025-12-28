@@ -1,5 +1,5 @@
 import {
-  Crimson_Pro as FontDisplay,
+  Newsreader as FontDisplay,
   JetBrains_Mono as FontMono,
   Inter as FontSans,
 } from "next/font/google";

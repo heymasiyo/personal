@@ -23,7 +23,7 @@ export function ThemeToggle() {
     setMounted(true);
   }, []);
 
-  if (!mounted) return null;
+  if (!mounted) return <div className="bg-background h-8 w-1" />;
 
   const buttons = [
     {
