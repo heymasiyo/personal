@@ -1,12 +1,12 @@
 "use client";
 
+import { Monitor, Moon, Sun } from "lucide-react";
 import { ThemeProvider as NextThemesProvider, useTheme } from "next-themes";
 import * as React from "react";
 
 import { Button } from "@/components/ui/button";
 import { ButtonGroup } from "@/components/ui/button-group";
 import { cn } from "@/lib/utils";
-import { Monitor, Moon, Sun } from "lucide-react";
 
 export function ThemeProvider({
   children,

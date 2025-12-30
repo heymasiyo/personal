@@ -151,6 +151,14 @@
   }
 }
 
+@utility text-mm {
+  @apply text-[0.9375rem] leading-normal;
+}
+
+@utility text-1xl {
+  @apply text-[1.375rem] leading-normal;
+}
+
 @utility custom-link {
-  @apply text-foreground hover:text-foreground/80 decoration-foreground/20 font-medium underline underline-offset-4 transition-colors;
+  @apply text-foreground hover:text-foreground/80 decoration-foreground/25 font-medium underline decoration-dotted! underline-offset-4 transition-colors;
 }

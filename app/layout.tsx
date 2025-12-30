@@ -1,4 +1,5 @@
 import "@/styles/globals.css";
+
 import type { Metadata } from "next";
 
 import { SiteFooter } from "@/components/site-footer";
@@ -30,7 +31,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="flex min-h-svh w-full max-w-160 flex-col px-5 py-24 md:px-0">
+          <div className="flex min-h-svh w-full max-w-172.5 flex-col px-5 py-24 md:px-0">
             <div className="flex-1">{children}</div>
             <SiteFooter />
           </div>
