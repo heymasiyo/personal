@@ -1,7 +1,4 @@
-"use client";
-
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import * as React from "react";
 
 import {
@@ -13,39 +10,42 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 
-export function Navigation() {
-  const pathname = usePathname();
+interface BreadcrumbProps {
+  title: string;
+  href: string;
+  isLink?: boolean;
+}
 
-  const rawPaths = pathname.split("/").filter(Boolean);
-
-  const formattedPaths = rawPaths.map((path) =>
-    path.replace(/-/g, " ").replace(/\b\w/g, (char) => char.toUpperCase())
-  );
-
+export function Navigation({
+  breadcrumbs,
+}: {
+  breadcrumbs: BreadcrumbProps[];
+}) {
   return (
     <Breadcrumb>
       <BreadcrumbList>
-        <BreadcrumbItem>
-          <BreadcrumbLink asChild>
-            <Link href="/">Home</Link>
-          </BreadcrumbLink>
-        </BreadcrumbItem>
-
-        {rawPaths.map((_, index) => {
-          const href = "/" + rawPaths.slice(0, index + 1).join("/");
-          const isLast = index === rawPaths.length - 1;
+        {breadcrumbs.map((item, index) => {
+          const isLast = index === breadcrumbs.length - 1;
 
           return (
-            <React.Fragment key={href}>
-              <BreadcrumbSeparator />
+            <React.Fragment key={`${item.href}-${index}`}>
+              {index > 0 && <BreadcrumbSeparator />}
               <BreadcrumbItem>
                 {isLast ? (
-                  <BreadcrumbPage className="line-clamp-1">
-                    {formattedPaths[index]}
-                  </BreadcrumbPage>
+                  <>
+                    {item.isLink ? (
+                      <BreadcrumbLink asChild>
+                        <Link href={item.href}>{item.title}</Link>
+                      </BreadcrumbLink>
+                    ) : (
+                      <BreadcrumbPage className="line-clamp-1">
+                        {item.title}
+                      </BreadcrumbPage>
+                    )}
+                  </>
                 ) : (
                   <BreadcrumbLink asChild>
-                    <Link href={href}>{formattedPaths[index]}</Link>
+                    <Link href={item.href}>{item.title}</Link>
                   </BreadcrumbLink>
                 )}
               </BreadcrumbItem>
