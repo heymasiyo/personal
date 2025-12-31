@@ -14,7 +14,7 @@ const components: MDXComponents = {
   h2: ({ className, ...props }: React.ComponentProps<"h2">) => (
     <h2
       className={cn(
-        "font-display text-1xl mt-9 mb-4 w-full font-medium",
+        "font-display mt-9 mb-4 w-full text-xl font-medium",
         className
       )}
       {...props}
@@ -23,7 +23,7 @@ const components: MDXComponents = {
   h3: ({ className, ...props }: React.ComponentProps<"h3">) => (
     <h3
       className={cn(
-        "font-display mt-4.5 mb-2 w-full text-xl font-medium",
+        "font-display mt-4.5 mb-2 w-full text-lg font-medium",
         className
       )}
       {...props}
