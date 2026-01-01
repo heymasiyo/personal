@@ -6,7 +6,7 @@ import Link from "next/link";
 
 import { Navigation } from "@/components/navigation";
 import { getPosts } from "@/lib/mdx";
-import { formatDate } from "@/lib/utils";
+import { estimateReadingTime, formatDate } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Thoughts",
@@ -64,9 +64,15 @@ export default function Thoughts() {
                     {post.title}
                   </h2>
 
-                  <span className="text-muted-foreground text-sm">
-                    {formatDate(new Date(post.publishedAt))}
-                  </span>
+                  <div className="text-muted-foreground flex items-center gap-2 text-sm">
+                    <span>{formatDate(new Date(post.publishedAt))}</span>
+
+                    <span>&#8226;</span>
+
+                    <span>
+                      {estimateReadingTime(post.content)} minutes read
+                    </span>
+                  </div>
                 </Link>
               ))}
             </>

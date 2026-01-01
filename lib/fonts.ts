@@ -1,4 +1,5 @@
 import {
+  Newsreader as FontDisplay,
   JetBrains_Mono as FontMono,
   Inter as FontSans,
 } from "next/font/google";
@@ -14,4 +15,14 @@ const fontMono = FontMono({
   variable: "--font-mono",
 });
 
-export const fontVariables = cn(fontSans.variable, fontMono.variable);
+const fontDisplay = FontDisplay({
+  subsets: ["latin"],
+  variable: "--font-display",
+  style: "italic",
+});
+
+export const fontVariables = cn(
+  fontSans.variable,
+  fontMono.variable,
+  fontDisplay.variable
+);
