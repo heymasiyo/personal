@@ -1,3 +1,4 @@
+import type { BreadcrumbProps } from "@/components/navigation";
 import type { Post } from "@/lib/mdx";
 import type { Metadata } from "next";
 
@@ -11,6 +12,17 @@ export const metadata: Metadata = {
   title: "Thoughts",
 };
 
+const breadcrumbs: BreadcrumbProps[] = [
+  {
+    title: "Home",
+    href: "/",
+  },
+  {
+    title: "Thoughts",
+    href: "/thoughts",
+  },
+];
+
 export default function Thoughts() {
   const posts: Post[] = getPosts("thoughts").sort((a, b) => {
     return (
@@ -20,12 +32,7 @@ export default function Thoughts() {
 
   return (
     <>
-      <Navigation
-        breadcrumbs={[
-          { title: "Home", href: "/" },
-          { title: "Thoughts", href: "/thoughts", isLink: false },
-        ]}
-      />
+      <Navigation breadcrumbs={breadcrumbs} />
 
       <div className="flex flex-col gap-3">
         <div className="border-b pb-6">
