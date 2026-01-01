@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div className="text-mm mb-16 flex flex-col gap-16">
       <section className="text-foreground/70 flex flex-col gap-4 leading-7">
-        <h1 className="text-foreground font-display text-xl font-medium">
+        <h1 className="text-foreground text-base font-medium">
           Satrio Wicaksono
         </h1>
 

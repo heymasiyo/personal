@@ -1,13 +1,20 @@
 import type { Metadata } from "next";
 
+import { Navigation } from "@/components/navigation";
+
 export const metadata: Metadata = {
   title: "Work",
 };
 
-export default function Thoughts() {
+export default function Work() {
   return (
-    <div>
-      <div></div>
-    </div>
+    <>
+      <Navigation
+        breadcrumbs={[
+          { title: "Home", href: "/" },
+          { title: "Work", href: "/work", isLink: false },
+        ]}
+      />
+    </>
   );
 }

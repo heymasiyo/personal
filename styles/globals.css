@@ -160,5 +160,5 @@
 }
 
 @utility custom-link {
-  @apply text-foreground hover:text-foreground/80 decoration-foreground/25 font-medium underline decoration-dotted! underline-offset-4 transition-colors;
+  @apply text-foreground hover:text-foreground/80 decoration-foreground/20 font-medium underline decoration-1 underline-offset-4 transition-colors;
 }

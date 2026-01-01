@@ -13,19 +13,13 @@ import { cn } from "@/lib/utils";
 const components: MDXComponents = {
   h2: ({ className, ...props }: React.ComponentProps<"h2">) => (
     <h2
-      className={cn(
-        "font-display mt-9 mb-4 w-full text-xl font-medium",
-        className
-      )}
+      className={cn("mt-9 mb-4 w-full text-lg font-medium", className)}
       {...props}
     />
   ),
   h3: ({ className, ...props }: React.ComponentProps<"h3">) => (
     <h3
-      className={cn(
-        "font-display mt-4.5 mb-2 w-full text-lg font-medium",
-        className
-      )}
+      className={cn("mt-4.5 mb-2 w-full text-base font-medium", className)}
       {...props}
     />
   ),
@@ -67,10 +61,7 @@ const components: MDXComponents = {
   ),
   em: ({ className, ...props }: React.ComponentProps<"em">) => (
     <em
-      className={cn(
-        "text-muted-foreground text-mm leading-7 italic",
-        className
-      )}
+      className={cn("text-foreground/80 text-mm leading-7 italic", className)}
       {...props}
     />
   ),

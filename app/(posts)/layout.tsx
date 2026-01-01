@@ -1,15 +1,7 @@
-import { Navigation } from "@/components/navigation";
-
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
-    <div className="flex flex-col gap-8">
-      <Navigation />
-
-      {children}
-    </div>
-  );
+  return <div className="mb-16 flex flex-col gap-12">{children}</div>;
 }
