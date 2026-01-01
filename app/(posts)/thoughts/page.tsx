@@ -36,7 +36,7 @@ export default function Thoughts() {
 
       <div className="flex flex-col gap-3">
         <div className="border-b pb-6">
-          <h1 className="font-medium">Thoughts</h1>
+          <h1 className="font-display text-xl font-medium">Thoughts</h1>
         </div>
 
         <div className="flex flex-col">
