@@ -1,7 +1,7 @@
 import {
   Newsreader as FontDisplay,
-  JetBrains_Mono as FontMono,
-  Inter as FontSans,
+  Geist_Mono as FontMono,
+  Geist as FontSans,
 } from "next/font/google";
 import { cn } from "./utils";
 

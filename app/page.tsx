@@ -2,9 +2,9 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="text-mm mb-16 flex flex-col gap-16">
+    <div className="text-mm mb-20 flex flex-col gap-16">
       <section className="text-foreground/70 flex flex-col gap-4 leading-7">
-        <h1 className="text-foreground font-display text-lg font-medium">
+        <h1 className="text-foreground font-display text-xl font-medium">
           Satrio Wicaksono
         </h1>
 

@@ -35,8 +35,8 @@ export default function Thoughts() {
       <Navigation breadcrumbs={breadcrumbs} />
 
       <div className="flex flex-col gap-3">
-        <div className="border-b pb-6">
-          <h1 className="font-display text-xl font-medium">Thoughts</h1>
+        <div className="border-b pb-5">
+          <h1 className="font-display text-1xl font-medium">Thoughts</h1>
         </div>
 
         <div className="flex flex-col">
