@@ -3,7 +3,8 @@ import {
   Geist_Mono as FontMono,
   Geist as FontSans,
 } from "next/font/google";
-import { cn } from "./utils";
+
+import { cn } from "@/lib/utils";
 
 const fontSans = FontSans({
   subsets: ["latin"],

@@ -37,7 +37,7 @@ export function PostNavigation({ posts }: PostNavigationProps) {
   }
 
   return (
-    <div className="flex w-full justify-between border-t pt-12">
+    <div className="flex w-full justify-between border-t pt-14">
       {previousPost && (
         <Link
           href={`${previousPost.slug}`}
