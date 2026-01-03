@@ -34,7 +34,7 @@ export default function RootLayout({
           <div className="from-background pointer-events-none fixed inset-x-0 top-0 z-50 h-24 bg-linear-to-b to-transparent mask-b-from-25% backdrop-blur-xs select-none" />
 
           <div className="isolate flex min-h-svh w-full max-w-166 flex-col px-5 py-24 md:px-0">
-            <div className="flex-1">{children}</div>
+            <main>{children}</main>
             <SiteFooter />
           </div>
         </ThemeProvider>
