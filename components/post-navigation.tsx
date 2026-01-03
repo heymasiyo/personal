@@ -42,6 +42,7 @@ export function PostNavigation({ posts }: PostNavigationProps) {
         <Link
           href={`${previousPost.slug}`}
           className="group flex w-full flex-col gap-1 text-left"
+          aria-label={`Previous: ${previousPost.title}`}
         >
           <span className="text-muted-foreground text-[0.8125rem] leading-normal">
             Previous
@@ -57,6 +58,7 @@ export function PostNavigation({ posts }: PostNavigationProps) {
         <Link
           href={`${nextPost.slug}`}
           className="group flex w-full flex-col gap-1 text-right"
+          aria-label={`Next: ${nextPost.title}`}
         >
           <span className="text-muted-foreground text-[0.8125rem] leading-normal">
             Next
