@@ -2,6 +2,7 @@ import type { Post } from "@/lib/mdx";
 
 import { MDX } from "@/components/mdx";
 import { PostNavigation } from "@/components/post-navigation";
+import { TableOfContents } from "@/components/table-of-contents";
 import { getPosts } from "@/lib/mdx";
 import { cn, estimateReadingTime, formatDate } from "@/lib/utils";
 
@@ -44,6 +45,8 @@ export function SitePost({ post, route }: SitePostProps) {
         >
           <MDX source={post.content} />
         </article>
+
+        <TableOfContents />
 
         <PostNavigation posts={posts} />
       </div>
