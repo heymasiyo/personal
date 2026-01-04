@@ -65,6 +65,9 @@ export function MDX(props: MDXRemoteProps) {
                   light: "github-light",
                 },
                 keepBackground: false,
+                defaultLang: {
+                  inline: "plaintext",
+                },
               },
             ],
           ] as PluggableList,

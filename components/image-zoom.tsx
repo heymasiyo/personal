@@ -13,6 +13,7 @@ export type ImageZoomProps = UncontrolledProps & {
   className?: string;
   backdropClassName?: string;
 };
+
 export const ImageZoom = ({
   className,
   backdropClassName,

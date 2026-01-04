@@ -142,6 +142,33 @@
   [role="button"]:not(:disabled) {
     cursor: pointer;
   }
+
+  code {
+    @apply rounded-md border p-1 font-mono text-sm;
+  }
+
+  code::before,
+  code::after {
+    content: "" !important;
+  }
+
+  pre {
+    @apply overflow-x-auto rounded-xl! border! p-6! font-mono;
+  }
+
+  code[data-theme*=" "],
+  code[data-theme*=" "] span {
+    color: var(--shiki-light);
+    background-color: var(--shiki-light-bg);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    code[data-theme*=" "],
+    code[data-theme*=" "] span {
+      color: var(--shiki-dark);
+      background-color: var(--shiki-dark-bg);
+    }
+  }
 }
 
 @utility no-scrollbar {

@@ -15,7 +15,6 @@ interface MDXImageProps extends ImageProps {
 
 export function MDXImage({ caption, alt, ...props }: MDXImageProps) {
   const [isImageLoading, setImageLoading] = React.useState(true);
-  const href = props.src.toString();
 
   return (
     <div className="not-prose my-10 flex w-full flex-col items-center gap-4">
