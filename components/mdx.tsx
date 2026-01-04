@@ -8,9 +8,13 @@ import rehypePrettyCode from "rehype-pretty-code";
 import rehypeSlug from "rehype-slug";
 import remarkGfm from "remark-gfm";
 
+import { MDXImage } from "@/components/mdx-image";
 import { cn } from "@/lib/utils";
 
 const components: MDXComponents = {
+  Image: ({ caption, alt, ...props }) => (
+    <MDXImage {...props} caption={caption} alt={alt} />
+  ),
   a: ({ className, children, ...props }: React.ComponentProps<"a">) => {
     let href = props.href;
 
