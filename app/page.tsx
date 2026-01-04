@@ -11,17 +11,8 @@ export default function Home() {
         <p>I'm a software engineer based in Indonesia.</p>
 
         <p>
-          I currently work at{" "}
-          <Link
-            href="https://inolabs.net"
-            className="custom-link"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Inolabs
-          </Link>
-          , where I focus on building reliable, thoughtful software and
-          contributing with care to both the product and the team.
+          I work full-time and as a freelancer, building software with a focus
+          on clarity, reliability, and thoughtful collaboration.
         </p>
 
         <p>
