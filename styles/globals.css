@@ -156,6 +156,10 @@
     @apply overflow-x-auto rounded-xl! border! p-6! font-mono;
   }
 
+  pre [data-line] {
+    @apply pr-6!;
+  }
+
   code[data-theme*=" "],
   code[data-theme*=" "] span {
     color: var(--shiki-light);
