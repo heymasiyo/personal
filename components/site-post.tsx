@@ -16,7 +16,7 @@ export function SitePost({ post, route }: SitePostProps) {
 
   return (
     <div className="flex flex-col gap-8">
-      <div className="flex flex-col gap-1.5">
+      <div className="flex flex-col gap-2">
         <h1 className="font-display text-[1.625rem] leading-normal font-medium">
           {post.title}
         </h1>
