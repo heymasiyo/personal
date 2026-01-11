@@ -10,6 +10,7 @@ import { estimateReadingTime, formatDate } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Thoughts",
+  description: "Thoughts, notes, and ongoing reflections.",
 };
 
 const breadcrumbs: BreadcrumbProps[] = [

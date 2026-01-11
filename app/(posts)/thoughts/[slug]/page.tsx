@@ -41,6 +41,13 @@ export async function generateMetadata({ params }: PageProps) {
   return {
     title,
     description,
+    keywords: post?.tags,
+    openGraph: {
+      title,
+      description,
+      type: "article",
+      publishedTime: post?.publishedAt,
+    },
   };
 }
 

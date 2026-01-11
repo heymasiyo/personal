@@ -2,14 +2,28 @@ import "@/styles/globals.css";
 
 import type { Metadata } from "next";
 
+import { baseUrl } from "@/app/sitemap";
 import { SiteFooter } from "@/components/site-footer";
 import { ThemeProvider } from "@/components/theme-provider";
 import { fontVariables } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(baseUrl!),
   title: "Satrio Wicaksono",
   description: "Software Engineer",
+  keywords: ["Design", "Development", "Engineering"],
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 
 export default function RootLayout({

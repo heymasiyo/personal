@@ -5,6 +5,7 @@ import { Navigation } from "@/components/navigation";
 
 export const metadata: Metadata = {
   title: "Work",
+  description: "Projects, experiments, and experience.",
 };
 
 const breadcrumbs: BreadcrumbProps[] = [
